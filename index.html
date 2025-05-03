@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickCart E-commerce CSS</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">QuickCart</div>
+        <div class="nav-links">
+          <a href="#featured" class="nav-link">Featured</a>
+          <a href="#new" class="nav-link">New Arrivals</a>
+          <a href="#deals" class="nav-link">Deals</a>
+        </div>
+        <div class="cart-icon" id="cartIcon">
+          🛒 <span id="cartCount"></span>
+          <div class="cart-tooltip">View Cart</div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Welcome to QuickCart</h1>
+          <p>Discover amazing tech products at unbeatable prices</p>
+          <a href="#products" class="cta-button">Shop Now</a>
+        </div>
+      </section>
+
+      <section class="featured-categories">
+        <div class="category-card">
+          <div class="category-icon">🎧</div>
+          <h3>Audio</h3>
+        </div>
+        <div class="category-card">
+          <div class="category-icon">⌚</div>
+          <h3>Wearables</h3>
+        </div>
+        <div class="category-card">
+          <div class="category-icon">💻</div>
+          <h3>Computers</h3>
+        </div>
+        <div class="category-card">
+          <div class="category-icon">📱</div>
+          <h3>Accessories</h3>
+        </div>
+      </section>
+
+      <section id="products" class="products-grid"></section>
+
+      <div id="cartModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>Your Cart</h2>
+            <button id="closeCart" class="close-button" aria-label="Close cart">×</button>
+          </div>
+          <div id="cartItems"></div>
+          <div class="cart-summary">
+            <div class="cart-total">
+              <span>Total:</span>
+              <strong>$<span id="cartTotal">0</span></strong>
+            </div>
+            <button id="checkoutBtn" class="checkout-btn">
+              Proceed to Checkout
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
